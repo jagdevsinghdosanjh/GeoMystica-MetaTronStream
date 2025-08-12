@@ -1,0 +1,11 @@
+# .gitignore
+__pycache__/
+*.log
+*.png
+*.jpg
+*.mp4
+*.json
+*.csv
+.streamlit/
+node_modules/
+.env

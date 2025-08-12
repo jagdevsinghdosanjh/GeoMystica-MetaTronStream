@@ -1,0 +1,12 @@
+streamlit>=1.30.0
+numpy>=1.24.0
+sympy>=1.12
+pillow>=10.0.0
+plotly>=5.20.0
+watchdog>=3.0.0
+streamlit-extras>=0.3.0
+scipy
+# streamlit-authenticator>=0.2.3      # For login/auth features
+# pymongo>=4.6.0                      # If connecting to MongoDB
+# streamlit-analytics>=0.1.0         # For tracking user interactions
+# matplotlib>=3.8.0                   # For static plots

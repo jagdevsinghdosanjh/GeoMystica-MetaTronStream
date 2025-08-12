@@ -1,0 +1,69 @@
+/* SacredSolids: Custom Streamlit Styling */
+
+/* Global font and background */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+}
+
+/* Title styling */
+h1 {
+    font-size: 2.5em;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+
+/* Sidebar customization */
+[data-testid="stSidebar"] {
+    background-color: #ecf0f1;
+    border-right: 2px solid #bdc3c7;
+}
+
+[data-testid="stSidebar"] .css-1d391kg {
+    padding-top: 2em;
+}
+
+/* Plotly chart container */
+.plot-container {
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 1em;
+    background-color: #ffffff;
+}
+
+/* Latex and symbolic section */
+.stMarkdown h2, .stMarkdown h3 {
+    color: #34495e;
+}
+
+.stMarkdown .latex {
+    font-size: 1.2em;
+    color: #2c3e50;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    font-size: 0.9em;
+    color: #7f8c8d;
+    margin-top: 2em;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #3498db !important;
+    color: white !important;
+    transition: background-color 0.3s ease;
+}
+
+/* Smooth fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.stApp {
+    animation: fadeIn 0.6s ease-in-out;
+}

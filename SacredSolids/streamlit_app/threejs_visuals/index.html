@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <title>SacredSolids 3D Viewer</title>
+    <!-- <link rel="stylesheet" href="./css/styles.css" /> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r148/three.min.js"></script>
+    <script src="js/solids.js"></script>
+    <!-- <style>
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f8;
+    font-family: 'Segoe UI', sans-serif;
+    overflow: hidden;
+  }
+
+  #scene-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle at center, #ffffff 0%, #dfe6e9 100%);
+  }
+</style> -->
+
+</head>
+
+<body>
+    <div id="scene-container"></div>
+    <div id="info-box">🔺 Tetrahedron: Symbol of Fire, Willpower, and Transformation</div>
+
+    <script>
+        // Scene setup
+        const scene = new THREE.Scene();
+        scene.background = new THREE.Color(0xf0f4f8);
+
+        const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
+        camera.position.set(3, 3, 3);
+
+        const renderer = new THREE.WebGLRenderer({ antialias: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.getElementById("scene-container").appendChild(renderer.domElement);
+
+        // Lighting
+        const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
+        scene.add(ambientLight);
+
+        const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
+        directionalLight.position.set(5, 5, 5);
+        scene.add(directionalLight);
+
+        // Tetrahedron geometry
+        const geometry = new THREE.TetrahedronGeometry(1);
+        const material = new THREE.MeshStandardMaterial({
+            color: 0xe74c3c,
+            flatShading: true,
+            transparent: true,
+            opacity: 0.9
+        });
+        const tetrahedron = new THREE.Mesh(geometry, material);
+        scene.add(tetrahedron);
+
+        // Wireframe overlay
+        const wireframe = new THREE.LineSegments(
+            new THREE.EdgesGeometry(geometry),
+            new THREE.LineBasicMaterial({ color: 0x2c3e50 })
+        );
+        tetrahedron.add(wireframe);
+
+        // Animation loop
+        function animate() {
+            requestAnimationFrame(animate);
+            tetrahedron.rotation.x += 0.005;
+            tetrahedron.rotation.y += 0.005;
+            renderer.render(scene, camera);
+        }
+        animate();
+
+        // Responsive resize
+        window.addEventListener("resize", () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+    </script>
+</body>
+
+</html>
