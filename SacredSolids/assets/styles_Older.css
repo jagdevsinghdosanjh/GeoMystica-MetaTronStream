@@ -1,0 +1,96 @@
+/* Global Styling */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f6f9;
+  color: #333;
+}
+
+/* Title Styling */
+.main-title {
+  font-size: 2.8em;
+  text-align: center;
+  margin-bottom: 0.5em;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Sidebar Customization */
+[data-testid="stSidebar"] {
+  background-color: #ecf0f1;
+  border-right: 2px solid #bdc3c7;
+  padding-top: 2em;
+}
+
+/* Plotly Chart Container */
+.plot-container {
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 1em;
+  background-color: #ffffff;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Symbolic Section Styling */
+.stMarkdown h2, .stMarkdown h3 {
+  color: #34495e;
+}
+
+.stMarkdown .latex {
+  font-size: 1.2em;
+  color: #2c3e50;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  font-size: 0.9em;
+  color: #7f8c8d;
+  margin-top: 2em;
+}
+
+/* Button Hover Effect */
+button:hover {
+  background-color: #3498db !important;
+  color: white !important;
+  transition: background-color 0.3s ease;
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Elemental Themes */
+.tetrahedron-theme {
+  background: linear-gradient(to right, #e74c3c, #f39c12); /* Fire */
+  color: white;
+}
+
+.cube-theme {
+  background: linear-gradient(to right, #27ae60, #2ecc71); /* Earth */
+  color: white;
+}
+
+.octahedron-theme {
+  background: linear-gradient(to right, #3498db, #9b59b6); /* Air */
+  color: white;
+}
+
+.dodecahedron-theme {
+  background: linear-gradient(to right, #8e44ad, #34495e); /* Ether */
+  color: white;
+}
+
+.icosahedron-theme {
+  background: linear-gradient(to right, #00bcd4, #2196f3); /* Water */
+  color: white;
+}
+
+/* Symbol Card Styling */
+.symbol-card {
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  animation: fadeIn 0.6s ease-in-out;
+}
