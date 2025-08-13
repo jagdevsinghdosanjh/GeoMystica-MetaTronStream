@@ -1,5 +1,5 @@
 import os
-import streamlit.components as components
+import streamlit.components.v1 as components
 
 def show_3d_viewer(solid_name=None):
     """

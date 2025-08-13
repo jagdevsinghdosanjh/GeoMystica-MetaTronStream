@@ -1,5 +1,6 @@
 import json
 from pathlib import Path
+
 SYMBOLS_PATH = Path("assets/symbols/platonic_symbols.json")
 
 def load_symbol_data():
